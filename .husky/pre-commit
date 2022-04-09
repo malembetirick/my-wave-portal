@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+detect-secrets scan >.secrets-baseline
+detect-secrets audit .secrets-baseline
